@@ -121,7 +121,7 @@
                     <rerunFailingTestsCount>2</rerunFailingTestsCount>
                     <suiteXmlFiles>
                         <!-- //    <suiteXmlFile>testng.xml</suiteXmlFile> // -->
-                        <suiteXmlFile>testngClass.xml</suiteXmlFile>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
@@ -145,6 +145,6 @@
 
     <properties>
         <!-- //   <suiteXmlFile>testng.xml</suiteXmlFile>// -->
-        <suiteXmlFile>testngClass</suiteXmlFile>
+        <suiteXmlFile>testng.xml</suiteXmlFile>
     </properties>
 </project>

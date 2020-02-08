@@ -1,6 +1,5 @@
 package test;
 
-
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -11,7 +10,7 @@ public class TestMain {
 
     public void setupClass() {
         baseUrl = "http://inspections.staging.brdo.com.ua/site/signup";
-        //headless = true;
+        headless = true;
         startMaximized = true;
         browser = "chrome";
         timeout = 8000;
