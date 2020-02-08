@@ -3,7 +3,7 @@ package test.Test;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import test.Metods.TestMetods;
+import test.Metods.TestMethods;
 import test.PO.DataProviders;
 import test.PO.SelenideSelectors;
 import test.TestMain;
@@ -25,7 +25,7 @@ public class PhoneTest extends SelenideSelectors {
         testMain.closeDriver();
     }
 
-    TestMetods testMetods = new TestMetods();
+    TestMethods testMetods = new TestMethods();
 
     @Test(dataProvider = "validPhoneRegistrationForm", dataProviderClass = DataProviders.class)
     public void validPhoneRegistrationFormPositiveTest(String validPhoneRegistrationForm) {

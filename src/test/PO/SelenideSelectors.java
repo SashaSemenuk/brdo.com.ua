@@ -42,14 +42,19 @@ public class SelenideSelectors {
     protected SelenideElement successPassword =  $x("//*[@class='form-group highlight-addon field-signupform-password required has-success']");
 
     //StateAgency
-    protected SelenideElement selectStateAgencyBtn =  $x("//*[@class='select2-selection__arrow']");
-    protected SelenideElement deleteStateAgencyBtn =  $x("//*[@class='select2-selection__clear']");
-    protected SelenideElement errorStateAgency =  $x("//*[@class='form-group highlight-addon field-signupform-regulator_type required has-error']");
+
+
+    protected SelenideElement errorTypeStateAgency =  $x("//*[@class='form-group highlight-addon field-signupform-regulator_type required has-error']");
+    protected SelenideElement errorStateAgency =  $x("//*[@class='form-group highlight-addon field-signupform-regulator_id required has-error']");
     protected SelenideElement successStateAgency =  $x("//*[@class='form-group highlight-addon field-signupform-regulator_type required has-success']");
     protected SelenideElement singleStateAgency =  $x("//*[@class='select2-selection select2-selection--single']");
-    protected SelenideElement selectedStateAgencyInput =  $x("//*[@class='select2-selection__rendered']");
     protected SelenideElement regulatorBlock =  $x("//*[@id='regulator-block']");
+    protected SelenideElement textSpheresControl =  $x("//*[@class='select2-selection__choice']");
+    protected SelenideElement selectAllTextSpheresControl =  $x("//*[@class='s2-select-label']");
+    protected SelenideElement recaptchaCheckbox =  $x("//*[@id=\"signupform-recaptcha-recaptcha-form-signup\"]//iframe");
+    protected SelenideElement submitBan =  $x("//*[@class='btn btn-primary btn-block']");
+    protected ElementsCollection deleteStateAgencyBtn =  $$x("//*[@class='select2-selection__clear']");
     protected ElementsCollection stateAgencyList =  $$x("//*[@class='select2-results__options']//li");
-
-
+    protected ElementsCollection selectStateAgencyBtn =  $$x("//*[@class='select2-selection__arrow']");
+    protected ElementsCollection selectedStateAgencyInput =  $$x("//*[@class='select2-selection__rendered']");
 }
