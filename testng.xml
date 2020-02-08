@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Main_suite" parallel="methods"  thread-count="3">
+<suite name="Main_suite" parallel="classes"  thread-count="5">
     <test name="test suite">
         <classes>
             <class name="test.Test.PasswordTest"/>

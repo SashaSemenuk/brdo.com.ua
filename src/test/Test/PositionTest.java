@@ -17,7 +17,7 @@ public class PositionTest extends SelenideSelectors {
     @BeforeMethod
     public void init() {
         testMain.setupClass();
-        testMetods.openUrl();
+        testMethods.openUrl();
     }
 
     @AfterMethod
@@ -25,11 +25,11 @@ public class PositionTest extends SelenideSelectors {
         testMain.closeDriver();
     }
 
-    TestMethods testMetods = new TestMethods();
+    TestMethods testMethods = new TestMethods();
 
     @Test(dataProvider = "notValidPositionRegistrationForm", dataProviderClass = DataProviders.class)
     public void notValidNameRegistrationFormNegativeTest(String notValidPositionRegistrationForm) {
-        testMetods.inputPosition(notValidPositionRegistrationForm);
+        testMethods.inputPosition(notValidPositionRegistrationForm);
 
         errorPosition.shouldBe(visible);
     }
@@ -37,7 +37,7 @@ public class PositionTest extends SelenideSelectors {
 
     @Test(dataProvider = "validPositionRegistrationForm", dataProviderClass = DataProviders.class)
     public void validNameRegistrationFormPositiveTest(String validPositionRegistrationForm) {
-        testMetods.inputPosition(validPositionRegistrationForm);
+        testMethods.inputPosition(validPositionRegistrationForm);
 
         successPosition.shouldBe(visible);
     }

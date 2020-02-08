@@ -16,7 +16,7 @@ public class NameFormTest extends SelenideSelectors {
     @BeforeMethod
     public void init() {
         testMain.setupClass();
-        testMetods.openUrl();
+        testMethods.openUrl();
     }
 
     @AfterMethod
@@ -24,11 +24,11 @@ public class NameFormTest extends SelenideSelectors {
         testMain.closeDriver();
     }
 
-    TestMethods testMetods = new TestMethods();
+    TestMethods testMethods = new TestMethods();
 
     @Test(dataProvider = "notValidNameRegistrationForm", dataProviderClass = DataProviders.class)
     public void NotValidNameRegistrationFormNegativeTest(String notValidNameRegistrationForm) {
-        testMetods.inputName(notValidNameRegistrationForm);
+        testMethods.inputName(notValidNameRegistrationForm);
 
         errorName.shouldBe(visible);
     }
@@ -36,7 +36,7 @@ public class NameFormTest extends SelenideSelectors {
 
     @Test(dataProvider = "validNameRegistrationForm", dataProviderClass = DataProviders.class)
     public void validNameRegistrationFormPositiveTest(String validNameRegistrationForm) {
-        testMetods.inputName(validNameRegistrationForm);
+        testMethods.inputName(validNameRegistrationForm);
 
         successName.shouldBe(visible);
     }

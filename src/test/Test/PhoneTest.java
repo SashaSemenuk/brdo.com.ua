@@ -17,7 +17,7 @@ public class PhoneTest extends SelenideSelectors {
     @BeforeMethod
     public void init() {
         testMain.setupClass();
-        testMetods.openUrl();
+        testMethods.openUrl();
     }
 
     @AfterMethod
@@ -25,11 +25,11 @@ public class PhoneTest extends SelenideSelectors {
         testMain.closeDriver();
     }
 
-    TestMethods testMetods = new TestMethods();
+    TestMethods testMethods = new TestMethods();
 
     @Test(dataProvider = "validPhoneRegistrationForm", dataProviderClass = DataProviders.class)
     public void validPhoneRegistrationFormPositiveTest(String validPhoneRegistrationForm) {
-        testMetods.inputPhone(validPhoneRegistrationForm);
+        testMethods.inputPhone(validPhoneRegistrationForm);
 
         inputPhone.shouldBe(visible);
     }

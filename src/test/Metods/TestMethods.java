@@ -2,8 +2,6 @@ package test.Metods;
 
 
 import test.PO.SelenideSelectors;
-
-import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 

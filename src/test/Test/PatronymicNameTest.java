@@ -17,7 +17,7 @@ public class PatronymicNameTest extends SelenideSelectors {
     @BeforeMethod
     public void init() {
         testMain.setupClass();
-        testMetods.openUrl();
+        testMethods.openUrl();
     }
 
     @AfterMethod
@@ -25,11 +25,11 @@ public class PatronymicNameTest extends SelenideSelectors {
         testMain.closeDriver();
     }
 
-    TestMethods testMetods = new TestMethods();
+    TestMethods testMethods = new TestMethods();
 
     @Test(dataProvider = "notValidPatronymicNameRegistrationForm", dataProviderClass = DataProviders.class)
     public void notValidSurnameRegistrationFormNegativeTest(String notValidSurnameRegistrationForm) {
-        testMetods.inputPatronymicName(notValidSurnameRegistrationForm);
+        testMethods.inputPatronymicName(notValidSurnameRegistrationForm);
 
         errorPatronymicName.shouldBe(visible);
     }
@@ -37,7 +37,7 @@ public class PatronymicNameTest extends SelenideSelectors {
 
     @Test(dataProvider = "validPatronymicNameRegistrationForm", dataProviderClass = DataProviders.class)
     public void validPatronymicNamRegistrationFormPositiveTest(String validPatronymicNameRegistrationForm) {
-        testMetods.inputPatronymicName(validPatronymicNameRegistrationForm);
+        testMethods.inputPatronymicName(validPatronymicNameRegistrationForm);
 
         successPatronymicName.shouldBe(visible);
     }

@@ -7,7 +7,6 @@ import test.Metods.TestMethods;
 import test.PO.DataProviders;
 import test.PO.SelenideSelectors;
 import test.TestMain;
-
 import static com.codeborne.selenide.Condition.visible;
 
 public class LastNameFormTest extends SelenideSelectors {
@@ -33,7 +32,6 @@ public class LastNameFormTest extends SelenideSelectors {
 
         errorLastName.shouldBe(visible);
     }
-
 
     @Test(dataProvider = "validLastNameRegistrationForm", dataProviderClass = DataProviders.class)
     public void validLastNameRegistrationFormPositiveTest(String notValidLastNameRegistrationForm) {

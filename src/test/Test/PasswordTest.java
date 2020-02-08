@@ -17,7 +17,7 @@ public class PasswordTest extends SelenideSelectors {
     @BeforeMethod
     public void init() {
         testMain.setupClass();
-        testMetods.openUrl();
+        testMethods.openUrl();
     }
 
     @AfterMethod
@@ -25,18 +25,18 @@ public class PasswordTest extends SelenideSelectors {
         testMain.closeDriver();
     }
 
-    TestMethods testMetods = new TestMethods();
+    TestMethods testMethods = new TestMethods();
 
     @Test(dataProvider = "validPasswordRegistrationForm", dataProviderClass = DataProviders.class)
     public void validPasswordRegistrationFormPositiveTest(String validPasswordRegistrationForm) {
-        testMetods.inputPassword(validPasswordRegistrationForm);
+        testMethods.inputPassword(validPasswordRegistrationForm);
 
         successPassword.shouldBe(visible);
     }
 
     @Test(dataProvider = "notValidPasswordRegistrationForm", dataProviderClass = DataProviders.class)
     public void notValidPasswordRegistrationFormNegativeTest(String notValidPasswordRegistrationForm) {
-        testMetods.inputPassword(notValidPasswordRegistrationForm);
+        testMethods.inputPassword(notValidPasswordRegistrationForm);
 
         errorPassword.shouldBe(visible);
     }

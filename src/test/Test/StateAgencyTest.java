@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import test.Metods.TestMethods;
 import test.PO.SelenideSelectors;
 import test.TestMain;
-
 import static com.codeborne.selenide.Condition.visible;
 
 public class StateAgencyTest extends SelenideSelectors {
@@ -17,7 +16,7 @@ public class StateAgencyTest extends SelenideSelectors {
     @BeforeMethod
     public void init() {
         testMain.setupClass();
-        testMetods.openUrl();
+        testMethods.openUrl();
     }
 
     @AfterMethod
@@ -25,11 +24,11 @@ public class StateAgencyTest extends SelenideSelectors {
         testMain.closeDriver();
     }
 
-    TestMethods testMetods = new TestMethods();
+    TestMethods testMethods = new TestMethods();
 
     @Test
     public void notSelectTypeControlStateAgencyTest() {
-        testMetods.selectTypeControlStateAgency();
+        testMethods.selectTypeControlStateAgency();
         deleteStateAgencyBtn.get(0)
                 .click();
 
@@ -48,7 +47,7 @@ public class StateAgencyTest extends SelenideSelectors {
 
     @Test
     public void selectTypeControlStateAgencyTest() {
-        testMetods.selectTypeControlStateAgency();
+        testMethods.selectTypeControlStateAgency();
 
         String txt = selectedStateAgencyInput.get(0).getText();
         Assert.assertTrue(txt.contains("Центральний"));
@@ -58,7 +57,7 @@ public class StateAgencyTest extends SelenideSelectors {
 
     @Test
     public void notSelectControlStateAgencyTest() {
-        testMetods.selectTypeControlStateAgency()
+        testMethods.selectTypeControlStateAgency()
         .selectControlStateAgency();
         deleteStateAgencyBtn.get(1).click();
 
@@ -67,7 +66,7 @@ public class StateAgencyTest extends SelenideSelectors {
 
     @Test
     public void clickSelectControlStateAgencyTest() {
-        testMetods.selectTypeControlStateAgency();
+        testMethods.selectTypeControlStateAgency();
         selectStateAgencyBtn.get(1)
                 .shouldBe(visible)
                 .click();
@@ -77,7 +76,7 @@ public class StateAgencyTest extends SelenideSelectors {
 
     @Test
     public void selectControlStateAgencyTest() {
-        testMetods.selectTypeControlStateAgency()
+        testMethods.selectTypeControlStateAgency()
         .selectControlStateAgency();
 
         String txt = selectedStateAgencyInput.get(1).getText();
@@ -86,7 +85,7 @@ public class StateAgencyTest extends SelenideSelectors {
 
     @Test
     public void selectSpheresControlStateAgencyTest() {
-        testMetods.selectTypeControlStateAgency()
+        testMethods.selectTypeControlStateAgency()
        .selectControlStateAgency()
         .selectSpheresControlStateAgency();
 
@@ -95,7 +94,7 @@ public class StateAgencyTest extends SelenideSelectors {
 
     @Test
     public void selectAllSpheresControlStateAgencyTest() {
-        testMetods.selectTypeControlStateAgency()
+        testMethods.selectTypeControlStateAgency()
         .selectControlStateAgency()
         .selectAllSpheresControlStateAgency();
 
@@ -104,7 +103,7 @@ public class StateAgencyTest extends SelenideSelectors {
 
     @Test
     public void registrationUserTest() {
-        testMetods.inputEmail("test@gmail.com")
+        testMethods.inputEmail("test@gmail.com")
         .inputLastName("Іванов")
         .inputName("Іван")
         .inputPatronymicName("Іванович")

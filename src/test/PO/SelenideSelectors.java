@@ -2,7 +2,6 @@ package test.PO;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -46,8 +45,6 @@ public class SelenideSelectors {
 
     protected SelenideElement errorTypeStateAgency =  $x("//*[@class='form-group highlight-addon field-signupform-regulator_type required has-error']");
     protected SelenideElement errorStateAgency =  $x("//*[@class='form-group highlight-addon field-signupform-regulator_id required has-error']");
-    protected SelenideElement successStateAgency =  $x("//*[@class='form-group highlight-addon field-signupform-regulator_type required has-success']");
-    protected SelenideElement singleStateAgency =  $x("//*[@class='select2-selection select2-selection--single']");
     protected SelenideElement regulatorBlock =  $x("//*[@id='regulator-block']");
     protected SelenideElement textSpheresControl =  $x("//*[@class='select2-selection__choice']");
     protected SelenideElement selectAllTextSpheresControl =  $x("//*[@class='s2-select-label']");

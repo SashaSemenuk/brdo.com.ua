@@ -7,7 +7,6 @@ import test.Metods.TestMethods;
 import test.PO.DataProviders;
 import test.PO.SelenideSelectors;
 import test.TestMain;
-
 import static com.codeborne.selenide.Condition.visible;
 
 public class EmailFormTest extends SelenideSelectors {

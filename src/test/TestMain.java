@@ -11,7 +11,8 @@ public class TestMain {
     public void setupClass() {
         baseUrl = "http://inspections.staging.brdo.com.ua/site/signup";
         headless = true;
-        startMaximized = true;
+        browserSize = "1920x1080";
+        //startMaximized = true;
         browser = "chrome";
         timeout = 8000;
         browserSize = "1920x1080";
