@@ -1,0 +1,12 @@
+target/
+/.idea
+/.allure
+*.iml
+*.log
+screenshots/
+#*config.properties
+allure-results/
+logsWarm/
+logsError/
+reports/
+allure-report/
