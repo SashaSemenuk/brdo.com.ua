@@ -16,7 +16,7 @@ public class LastNameFormTest extends SelenideSelectors {
     @BeforeMethod
     public void init() {
         testMain.setupClass();
-        testMetods.openUrl();
+        testMethods.openUrl();
     }
 
     @AfterMethod
@@ -24,18 +24,18 @@ public class LastNameFormTest extends SelenideSelectors {
         testMain.closeDriver();
     }
 
-    TestMethods testMetods = new TestMethods();
+    TestMethods testMethods = new TestMethods();
 
     @Test(dataProvider = "notValidLastNameRegistrationForm", dataProviderClass = DataProviders.class)
     public void validLastNameRegistrationFormNegativeTest(String notValidLastNameRegistrationForm) {
-        testMetods.inputLastName(notValidLastNameRegistrationForm);
+        testMethods.inputLastName(notValidLastNameRegistrationForm);
 
         errorLastName.shouldBe(visible);
     }
 
     @Test(dataProvider = "validLastNameRegistrationForm", dataProviderClass = DataProviders.class)
     public void validLastNameRegistrationFormPositiveTest(String notValidLastNameRegistrationForm) {
-        testMetods.inputLastName(notValidLastNameRegistrationForm);
+        testMethods.inputLastName(notValidLastNameRegistrationForm);
 
         successLastName.shouldBe(visible);
     }

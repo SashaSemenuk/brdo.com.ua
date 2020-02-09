@@ -16,7 +16,7 @@ public class EmailFormTest extends SelenideSelectors {
     @BeforeMethod
     public void init() {
         testMain.setupClass();
-        testMetods.openUrl();
+        testMethods.openUrl();
     }
 
     @AfterMethod
@@ -24,25 +24,25 @@ public class EmailFormTest extends SelenideSelectors {
         testMain.closeDriver();
     }
 
-    TestMethods testMetods = new TestMethods();
+    TestMethods testMethods = new TestMethods();
 
     @Test(dataProvider = "notValidEmailRegistrationForm", dataProviderClass = DataProviders.class)
     public void validEmailRegistrationFormNegativeTest(String validEmailLoginForm) {
-        testMetods.inputEmail(validEmailLoginForm);
+        testMethods.inputEmail(validEmailLoginForm);
 
         errorEmail.shouldBe(visible);
     }
 
     @Test(dataProvider = "validEmailRegistrationForm", dataProviderClass = DataProviders.class)
     public void validEmailRegistrationFormPositiveTest(String validEmailRegistrationForm) {
-        testMetods.inputEmail(validEmailRegistrationForm);
+        testMethods.inputEmail(validEmailRegistrationForm);
 
         successEmail.shouldBe(visible);
     }
 
     @Test
     public void inputEmail(){
-        testMetods.inputEmail("test@gmail.com");
+        testMethods.inputEmail("test@gmail.com");
         successEmail.shouldBe(visible);
     }
 
