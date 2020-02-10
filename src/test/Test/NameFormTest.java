@@ -27,7 +27,7 @@ public class NameFormTest extends SelenideSelectors {
     TestMethods testMethods = new TestMethods();
 
     @Test(dataProvider = "notValidNameRegistrationForm", dataProviderClass = DataProviders.class)
-    public void NotValidNameRegistrationFormNegativeTest(String notValidNameRegistrationForm) {
+    public void notValidNameRegistrationFormNegativeTest(String notValidNameRegistrationForm) {
         testMethods.inputName(notValidNameRegistrationForm);
 
         errorName.shouldBe(visible);

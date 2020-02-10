@@ -10,7 +10,7 @@ public class TestMain {
         headless = true;
         browserSize = "1920x1080";
         browser = "chrome";
-        timeout = 8000;
+        timeout = 10000;
         browserSize = "1920x1080";
         reopenBrowserOnFail = true;
     }
